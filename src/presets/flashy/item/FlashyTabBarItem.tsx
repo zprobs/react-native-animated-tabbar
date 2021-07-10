@@ -4,7 +4,12 @@ import Animated from 'react-native-reanimated';
 // @ts-ignore 😞
 import MaskedView from '@react-native-community/masked-view';
 import { Svg, Circle, SvgProps, CircleProps } from 'react-native-svg';
-import { useValues, transformOrigin, toRad } from 'react-native-redash';
+import {
+  useValues,
+  transformOrigin,
+  toRad,
+  // @ts-ignore
+} from 'react-native-redash/lib/module/v1';
 // @ts-ignore 😞
 import isEqual from 'lodash.isequal';
 import {
@@ -18,11 +23,11 @@ import { styles } from './styles';
 
 const AnimatedSvg = Animated.createAnimatedComponent(
   Svg
-) as React.ComponentClass<Animated.AnimateProps<ViewStyle, SvgProps>, any>;
+) as React.ComponentClass<Animated.AnimateProps<ViewStyle & SvgProps>, any>;
 const AnimatedCircle = Animated.createAnimatedComponent(
   Circle
 ) as React.ComponentClass<
-  Animated.AnimateProps<ViewStyle, CircleProps & { style?: any }>,
+  Animated.AnimateProps<ViewStyle & CircleProps & { style?: any }>,
   any
 >;
 

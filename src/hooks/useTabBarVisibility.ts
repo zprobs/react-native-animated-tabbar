@@ -11,7 +11,8 @@ import Animated, {
   startClock,
   timing,
 } from 'react-native-reanimated';
-import { useClock, useValue } from 'react-native-redash';
+// @ts-ignore
+import { useClock, useValue } from 'react-native-redash/lib/module/v1';
 import { Easing } from '../utilities';
 
 export const useTabBarVisibility = (shouldShowTabBar: boolean) => {
